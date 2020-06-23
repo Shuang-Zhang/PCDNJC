@@ -86,7 +86,7 @@ void test_parallel(const Matrix &xe,const Matrix&X,const Matrix&y,Opts opts,
     std::cout<<"--------"<<opts.method<<"---------"<<std::endl;
     int maxthread = opts.thread;
     
-    std::string strfile = opts.respath + opts.method+to_string(dataParams.dataset)+".txt";
+    std::string strfile = opts.respath + opts.method+".txt";
     remove(strfile.c_str());
     //记录时间等结果，将用于在Matlab中绘图
     std::ofstream outfile;
