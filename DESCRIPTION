@@ -8,4 +8,5 @@ Maintainer: Shuang Zhang <zhangshuang_jz@sina.cn>
 Description: The Jacobi type CD algorithm with warmstarts in high-dimension sparse estimation.
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.3), RcppEigen
+URL: https://github.com/Shuang-Zhang/PCDNJC
 LinkingTo: Rcpp, RcppEigen
