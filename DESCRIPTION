@@ -1,0 +1,11 @@
+Package: CDJNC
+Type: Package
+Title: Coordinate Descent, Jacobi or Gauss-Siedel
+Version: 1.0
+Date: 2020-02-11
+Author: Your Name
+Maintainer: Shuang Zhang <zhangshuang_jz@sina.cn>
+Description: The Jacobi type CD algorithm with warmstarts in high-dimension sparse estimation.
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.3), RcppEigen
+LinkingTo: Rcpp, RcppEigen

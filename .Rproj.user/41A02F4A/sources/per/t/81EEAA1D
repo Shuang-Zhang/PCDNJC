@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592805224370.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1529192024",
+    "id" : "81EEAA1D",
+    "lastKnownWriteTime" : 1592804350,
+    "last_content_update" : 1592804350,
+    "path" : "E://CDNJC/src/RcppExports.cpp",
+    "project_path" : "src/RcppExports.cpp",
+    "properties" : {
+        "cursorPosition" : "27,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : true,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}

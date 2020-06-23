@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592805226702.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "538511961",
+    "id" : "3530D96C",
+    "lastKnownWriteTime" : 1592745709,
+    "last_content_update" : 1592745709,
+    "path" : "E://CDNJC/src/cdcparallel.cpp",
+    "project_path" : "src/cdcparallel.cpp",
+    "properties" : {
+        "cursorPosition" : "0,10",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "cpp"
+}
