@@ -1,14 +1,15 @@
-# CDJNC
-R package "CDJNC" for the Jacobi type CD algorithm with warmstarts in high-dimension sparse estimation, which is proposed by Jiao et al. (2020+).
+# PCDNJC
+R package "PCDNJC" for the Jacobi type CD algorithm with warmstarts in high-dimension sparse estimation, which is proposed by Jiao et al. (2020+).
 # Installation
-
-    #install.packages("devtools")
+	# Requirs openblas envirnment for parallel computation.
+	# Pure stand-alone version(Shuang-Zhang/CDNJC) can be used without openblas envirnment.
+    # install.packages("devtools")
     library(devtools)
-    install_github("Shuang-Zhang/CDJNC")
+    install_github("Shuang-Zhang/PCDNJC")
    
 # Example
 
-    library(CDJNC)
+    library(PCDNJC)
 	# Stand-alone Version
 	
 	# Settings

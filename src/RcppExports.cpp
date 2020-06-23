@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // gdata
 std::vector<Eigen::MatrixXd> gdata(const int& n, const int& p, const int& K, double sigma, const double& ratio, const int& kind, double rho, const int& seed, const bool& isnorm, std::string nnn, double snr);
-RcppExport SEXP _CDJNC_gdata(SEXP nSEXP, SEXP pSEXP, SEXP KSEXP, SEXP sigmaSEXP, SEXP ratioSEXP, SEXP kindSEXP, SEXP rhoSEXP, SEXP seedSEXP, SEXP isnormSEXP, SEXP nnnSEXP, SEXP snrSEXP) {
+RcppExport SEXP _PCDNJC_gdata(SEXP nSEXP, SEXP pSEXP, SEXP KSEXP, SEXP sigmaSEXP, SEXP ratioSEXP, SEXP kindSEXP, SEXP rhoSEXP, SEXP seedSEXP, SEXP isnormSEXP, SEXP nnnSEXP, SEXP snrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -29,7 +29,7 @@ END_RCPP
 }
 // cdnjc
 std::vector<Eigen::MatrixXd> cdnjc(Eigen::MatrixXd& x, Eigen::VectorXd& y, std::string pen, std::string nnn, int N, double Lmin, double ga, double mu, int imax, double tol);
-RcppExport SEXP _CDJNC_cdnjc(SEXP xSEXP, SEXP ySEXP, SEXP penSEXP, SEXP nnnSEXP, SEXP NSEXP, SEXP LminSEXP, SEXP gaSEXP, SEXP muSEXP, SEXP imaxSEXP, SEXP tolSEXP) {
+RcppExport SEXP _PCDNJC_cdnjc(SEXP xSEXP, SEXP ySEXP, SEXP penSEXP, SEXP nnnSEXP, SEXP NSEXP, SEXP LminSEXP, SEXP gaSEXP, SEXP muSEXP, SEXP imaxSEXP, SEXP tolSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -49,7 +49,7 @@ END_RCPP
 }
 // pcdnjc
 int pcdnjc(int p, int dataset, int n, int K, double sigma, double ratio, int seednum, double rho, double mu, double del, int thread, int numcore, const char* method, int N, double Lmax, double Lmin, int MaxIt, double stop, const char* respath);
-RcppExport SEXP _CDJNC_pcdnjc(SEXP pSEXP, SEXP datasetSEXP, SEXP nSEXP, SEXP KSEXP, SEXP sigmaSEXP, SEXP ratioSEXP, SEXP seednumSEXP, SEXP rhoSEXP, SEXP muSEXP, SEXP delSEXP, SEXP threadSEXP, SEXP numcoreSEXP, SEXP methodSEXP, SEXP NSEXP, SEXP LmaxSEXP, SEXP LminSEXP, SEXP MaxItSEXP, SEXP stopSEXP, SEXP respathSEXP) {
+RcppExport SEXP _PCDNJC_pcdnjc(SEXP pSEXP, SEXP datasetSEXP, SEXP nSEXP, SEXP KSEXP, SEXP sigmaSEXP, SEXP ratioSEXP, SEXP seednumSEXP, SEXP rhoSEXP, SEXP muSEXP, SEXP delSEXP, SEXP threadSEXP, SEXP numcoreSEXP, SEXP methodSEXP, SEXP NSEXP, SEXP LmaxSEXP, SEXP LminSEXP, SEXP MaxItSEXP, SEXP stopSEXP, SEXP respathSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -78,13 +78,13 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_CDJNC_gdata", (DL_FUNC) &_CDJNC_gdata, 11},
-    {"_CDJNC_cdnjc", (DL_FUNC) &_CDJNC_cdnjc, 10},
-    {"_CDJNC_pcdnjc", (DL_FUNC) &_CDJNC_pcdnjc, 19},
+    {"_PCDNJC_gdata", (DL_FUNC) &_PCDNJC_gdata, 11},
+    {"_PCDNJC_cdnjc", (DL_FUNC) &_PCDNJC_cdnjc, 10},
+    {"_PCDNJC_pcdnjc", (DL_FUNC) &_PCDNJC_pcdnjc, 19},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_CDJNC(DllInfo *dll) {
+RcppExport void R_init_PCDNJC(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

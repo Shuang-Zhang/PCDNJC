@@ -2,14 +2,14 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 gdata <- function(n = 200L, p = 1000L, K = 10L, sigma = 0.1, ratio = 1.0, kind = 1L, rho = 1.0e-10, seed = 1L, isnorm = TRUE, nnn = "sqrtn", snr = 1.0e-10) {
-    .Call(`_CDJNC_gdata`, n, p, K, sigma, ratio, kind, rho, seed, isnorm, nnn, snr)
+    .Call(`_PCDNJC_gdata`, n, p, K, sigma, ratio, kind, rho, seed, isnorm, nnn, snr)
 }
 
 cdnjc <- function(x, y, pen = "mcp", nnn = "sqrtn", N = 100L, Lmin = 1.0e-5, ga = 1.0e-10, mu = 0.5, imax = 1L, tol = 1.0e-5) {
-    .Call(`_CDJNC_cdnjc`, x, y, pen, nnn, N, Lmin, ga, mu, imax, tol)
+    .Call(`_PCDNJC_cdnjc`, x, y, pen, nnn, N, Lmin, ga, mu, imax, tol)
 }
 
 pcdnjc <- function(p = 4096L, dataset = 0L, n = 1024L, K = 32L, sigma = 0.05, ratio = 1.0, seednum = 0L, rho = 0.0, mu = 0.1202, del = 1.6, thread = 8L, numcore = 8L, method = "all", N = 50L, Lmax = 1.0, Lmin = 1e-5, MaxIt = 20L, stop = 1e-3, respath = "draw/") {
-    .Call(`_CDJNC_pcdnjc`, p, dataset, n, K, sigma, ratio, seednum, rho, mu, del, thread, numcore, method, N, Lmax, Lmin, MaxIt, stop, respath)
+    .Call(`_PCDNJC_pcdnjc`, p, dataset, n, K, sigma, ratio, seednum, rho, mu, del, thread, numcore, method, N, Lmax, Lmin, MaxIt, stop, respath)
 }
 
