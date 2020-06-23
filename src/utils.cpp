@@ -203,7 +203,7 @@ bool load(Matrix &x,std::string strfile,int irow,int icol){
 void parse_command_line(int argc, char **argv, DataParams &dataparams,Opts& opts)
 {
     //默认参数
-    dataparams.dataset = 0; //0表示用Matlab生成数据集，否则这里重新生成
+    // dataparams.dataset = 0; //0表示用Matlab生成数据集，否则这里重新生成
     dataparams.p = 4096;
     dataparams.n=1024;
     dataparams.sigma = 0.05;
@@ -231,9 +231,9 @@ void parse_command_line(int argc, char **argv, DataParams &dataparams,Opts& opts
 			exit_with_help();
 		switch(argv[i-1][1])
 		{
-            case 'd':
-                dataparams.dataset = atoi(argv[i]);
-                break;
+            // case 'd':
+            //     dataparams.dataset = atoi(argv[i]);
+            //     break;
             case 'p':
                 dataparams.p=atoi(argv[i]);
                 break;
@@ -291,7 +291,6 @@ void parse_command_line(int argc, char **argv, DataParams &dataparams,Opts& opts
 
 void exit_with_help(){
     std::cout<<
-    "-d:0时使用Matlab 固定随机种子为0生成的数据集，为其他值时这里重新生成数据集"<<std::endl<<
     "-p:length of solution"<<std::endl<<
     "-n:number of samples"<<std::endl<<
     "-K:number of nonzeros element"<<std::endl<<

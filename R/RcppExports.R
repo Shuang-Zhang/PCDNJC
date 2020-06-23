@@ -9,7 +9,7 @@ cdnjc <- function(x, y, pen = "mcp", nnn = "sqrtn", N = 100L, Lmin = 1.0e-5, ga 
     .Call(`_PCDNJC_cdnjc`, x, y, pen, nnn, N, Lmin, ga, mu, imax, tol)
 }
 
-pcdnjc <- function(p = 4096L, dataset = 0L, n = 1024L, K = 32L, sigma = 0.05, ratio = 1.0, seednum = 0L, rho = 0.0, mu = 0.1202, del = 1.6, thread = 8L, numcore = 8L, method = "all", N = 50L, Lmax = 1.0, Lmin = 1e-5, MaxIt = 20L, stop = 1e-3, respath = "draw/") {
-    .Call(`_PCDNJC_pcdnjc`, p, dataset, n, K, sigma, ratio, seednum, rho, mu, del, thread, numcore, method, N, Lmax, Lmin, MaxIt, stop, respath)
+pcdnjc <- function(p = 4096L, n = 1024L, K = 32L, sigma = 0.05, ratio = 1.0, seednum = 0L, rho = 0.0, mu = 0.1202, del = 1.6, thread = 8L, numcore = 8L, method = "all", N = 50L, Lmax = 1.0, Lmin = 1e-5, MaxIt = 20L, stop = 1e-3, respath = "draw/") {
+    .Call(`_PCDNJC_pcdnjc`, p, n, K, sigma, ratio, seednum, rho, mu, del, thread, numcore, method, N, Lmax, Lmin, MaxIt, stop, respath)
 }
 

@@ -48,13 +48,12 @@ BEGIN_RCPP
 END_RCPP
 }
 // pcdnjc
-int pcdnjc(int p, int dataset, int n, int K, double sigma, double ratio, int seednum, double rho, double mu, double del, int thread, int numcore, const char* method, int N, double Lmax, double Lmin, int MaxIt, double stop, const char* respath);
-RcppExport SEXP _PCDNJC_pcdnjc(SEXP pSEXP, SEXP datasetSEXP, SEXP nSEXP, SEXP KSEXP, SEXP sigmaSEXP, SEXP ratioSEXP, SEXP seednumSEXP, SEXP rhoSEXP, SEXP muSEXP, SEXP delSEXP, SEXP threadSEXP, SEXP numcoreSEXP, SEXP methodSEXP, SEXP NSEXP, SEXP LmaxSEXP, SEXP LminSEXP, SEXP MaxItSEXP, SEXP stopSEXP, SEXP respathSEXP) {
+int pcdnjc(int p, int n, int K, double sigma, double ratio, int seednum, double rho, double mu, double del, int thread, int numcore, const char* method, int N, double Lmax, double Lmin, int MaxIt, double stop, const char* respath);
+RcppExport SEXP _PCDNJC_pcdnjc(SEXP pSEXP, SEXP nSEXP, SEXP KSEXP, SEXP sigmaSEXP, SEXP ratioSEXP, SEXP seednumSEXP, SEXP rhoSEXP, SEXP muSEXP, SEXP delSEXP, SEXP threadSEXP, SEXP numcoreSEXP, SEXP methodSEXP, SEXP NSEXP, SEXP LmaxSEXP, SEXP LminSEXP, SEXP MaxItSEXP, SEXP stopSEXP, SEXP respathSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type p(pSEXP);
-    Rcpp::traits::input_parameter< int >::type dataset(datasetSEXP);
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
     Rcpp::traits::input_parameter< int >::type K(KSEXP);
     Rcpp::traits::input_parameter< double >::type sigma(sigmaSEXP);
@@ -72,7 +71,7 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< int >::type MaxIt(MaxItSEXP);
     Rcpp::traits::input_parameter< double >::type stop(stopSEXP);
     Rcpp::traits::input_parameter< const char* >::type respath(respathSEXP);
-    rcpp_result_gen = Rcpp::wrap(pcdnjc(p, dataset, n, K, sigma, ratio, seednum, rho, mu, del, thread, numcore, method, N, Lmax, Lmin, MaxIt, stop, respath));
+    rcpp_result_gen = Rcpp::wrap(pcdnjc(p, n, K, sigma, ratio, seednum, rho, mu, del, thread, numcore, method, N, Lmax, Lmin, MaxIt, stop, respath));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -80,7 +79,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_PCDNJC_gdata", (DL_FUNC) &_PCDNJC_gdata, 11},
     {"_PCDNJC_cdnjc", (DL_FUNC) &_PCDNJC_cdnjc, 10},
-    {"_PCDNJC_pcdnjc", (DL_FUNC) &_PCDNJC_pcdnjc, 19},
+    {"_PCDNJC_pcdnjc", (DL_FUNC) &_PCDNJC_pcdnjc, 18},
     {NULL, NULL, 0}
 };
 

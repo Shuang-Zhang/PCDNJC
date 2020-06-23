@@ -1,6 +1,6 @@
-\name{CDNJC-package}
-\alias{CDNJC-package}
-\alias{CDNJC}
+\name{PCDNJC-package}
+\alias{PCDNJC-package}
+\alias{PCDNJC}
 \docType{package}
 \title{
   A short title line describing what the package does

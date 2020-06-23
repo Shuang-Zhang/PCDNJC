@@ -26,7 +26,7 @@ void test_parallel(const Matrix &xe,const Matrix&X,const Matrix&y,Opts opts,
                    const Matrix &Ae,const DataParams & dataParams);
 
 // [[Rcpp::export]]
-int pcdnjc(int p=4096, int dataset=0, int n=1024, int K=32, double sigma=0.05, double ratio=1.0, int seednum=0, double rho=0.0, 
+int pcdnjc(int p=4096, int n=1024, int K=32, double sigma=0.05, double ratio=1.0, int seednum=0, double rho=0.0, 
         double mu=0.1202, double del=1.6, int thread=8, int numcore=8, const char* method="all", int N=50, 
         double Lmax=1.0, double Lmin=1e-5, int MaxIt=20, double stop = 1e-3, const char* respath="draw/"){
     //设置openblas线程数为1
@@ -36,7 +36,7 @@ int pcdnjc(int p=4096, int dataset=0, int n=1024, int K=32, double sigma=0.05, d
     DataParams pp;
     //parse_command_line(argc,argv, p,opts);
     pp.p = p;
-    pp.dataset = dataset;
+    //pp.dataset = dataset;
     pp.n=n;
     pp.K=K;
     pp.sigma=sigma;
@@ -54,20 +54,20 @@ int pcdnjc(int p=4096, int dataset=0, int n=1024, int K=32, double sigma=0.05, d
     opts.Lmin = Lmin;
     opts.MaxIt = MaxIt;
     opts.stop = stop;
-    if(pp.dataset == 0){
-        cout<<"默认使用旧有的由Matlab固定seednum参数为0生成的数据集"<<endl;
-        cout<<"若要重新生成数据集，请使用 -d 参数并设置非零值"<<endl;
-        load(X,"data/X.txt",1024,4096);
-        load(y,"data/y.txt",1024,1);
-        load(xe,"data/xe.txt",4096,1);
-        load(Ae,"data/Ae.txt",32,1);
-        pp.p = 4096;
-        pp.n=1024;
-        opts.mu    = 1/log(pp.p); 
-        opts.del = 1*pp.sigma*sqrt(pp.n);  // Only  using  BIC by setting  opts.del = 0;
-    }else{
+    // if(pp.dataset == 0){
+    //     cout<<"默认使用旧有的由Matlab固定seednum参数为0生成的数据集"<<endl;
+    //     cout<<"若要重新生成数据集，请使用 -d 参数并设置非零值"<<endl;
+    //     load(X,"data/X.txt",1024,4096);
+    //     load(y,"data/y.txt",1024,1);
+    //     load(xe,"data/xe.txt",4096,1);
+    //     load(Ae,"data/Ae.txt",32,1);
+    //     pp.p = 4096;
+    //     pp.n=1024;
+    //     opts.mu    = 1/log(pp.p); 
+    //     opts.del = 1*pp.sigma*sqrt(pp.n);  // Only  using  BIC by setting  opts.del = 0;
+    // }else{
         gendata(X,y,xe,Ae,pp.n,pp.p,pp.K,pp.sigma,pp.ratio,pp.seednum,pp.rho);
-    }
+    // }
     if(opts.method=="all"){
         std::vector<std::string> strmethod={"mcp","l0","l1","scad"};
         for(auto &iter :strmethod){
