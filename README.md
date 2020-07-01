@@ -24,13 +24,12 @@ R package "PCDNJC" for the Jacobi type CD algorithm with warmstarts in high-dime
 	# Parallel Version
 	
 	# Settings
-	dataset=1 # 0 means using the prepared data, otherwise generate new data.
 	method="all" # Choose from l0,l1,mcp,scad or all
 	p=4096; n=1024; K=32; sigma=0.05; ratio=1.0; rho=0.0; seednum=0; Lmax=1.0; Lmin=1e-5; MaxIt=20; stop=1e-3; thread=8; numcore=8
 	N=50 # Set to 100 to improve accuracy
 	
 	# PCDJ algorithm
-	pcdnjc(p=p, dataset=dataset, n=n, K=K, sigma=sigma, ratio=ratio, seednum=seednum, rho=rho, thread=thread, numcore=numcore, method=method, N=N, Lmax=Lmax, Lmin=Lmin, MaxIt=MaxIt) #Result saved in draw filefolder
+	pcdnjc(p=p, n=n, K=K, sigma=sigma, ratio=ratio, seednum=seednum, rho=rho, thread=thread, numcore=numcore, method=method, N=N, Lmax=Lmax, Lmin=Lmin, MaxIt=MaxIt) #Result saved in draw filefolder
     
 # References
 Jiao Y. Coordinate Descent, Jacobi or Gauss-Siedel. Manuscript.
